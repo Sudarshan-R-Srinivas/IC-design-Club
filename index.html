@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IC Design Club</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f0f8ff, #87ceeb);
+            overflow-x: hidden;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .title-image {
+            width: 100%;
+            max-width: 800px;
+            animation: fadeIn 3s;
+            margin: 20px auto;
+            display: block;
+        }
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .box {
+            margin: 20px auto;
+            padding: 20px;
+            background: #343434;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgb(150, 0, 0);
+            transform: perspective(1000px) rotateY(0deg);
+            animation: float 5s infinite ease-in-out;
+            transition: transform 0.5s;
+        }
+        .box:hover {
+            transform: perspective(1000px) rotateY(10deg);
+        }
+        .inner-box {
+            margin: 15px auto;
+            padding: 15px;
+            background: #4a4a4a;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(10, 153, 155, 0.2);
+            color: white;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .gallery-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .gallery-container h2 {
+            color: white;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            font-size: 2rem; /* Increased font size */
+        }
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Added box-shadow for image */
+            max-height: 400px; /* Restrict image height */
+            object-fit: cover; /* Ensure images fit the box correctly */
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .gallery-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="IC Design Club" class="title-image">
+        
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="#about-us">About Us</a>
+            <a href="#our-events">Our Events</a>
+            <a href="#our-mission">Our Mission</a>
+            <a href="#our-vision">Our Vision</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+
+        <hr>
+        <br><br><br>
+
+        <div class="box" id="about-us">
+            <h2 style="color: white; text-decoration: underline;">About Us</h2>
+            <p style="color: white;">DECCTEROUS - IC Design Club of ECE department, NIE Mysuru aims to provide practical knowledge as well as strong fundamentals in Electronics and Communication Engineering. Our mission is to prepare students for a career in the Core Domains by equipping them with cutting-edge skills and industry knowledge.</p>
+            <br>
+        </div><br><br>
+        
+        <div class="box" id="our-events">
+            <h2 style="color: white; text-decoration: underline;">Our Events</h2>
+            <p style="color: white;">Join our exciting seminars, hackathons, and project showcases to learn and network with industry experts.</p>
+            <div class="inner-box">
+                <h3>Workshops</h3>
+                <p>We conduct hands-on workshops to dive deep into IC design concepts, tools, and technologies.</p>
+            </div>
+            <div class="inner-box">
+                <h3>Projects</h3>
+                <p>Compete and collaborate in solving real-world circuit design challenges.</p>
+            </div>
+            <div class="inner-box">
+                <h3>Guest Lectures</h3>
+                <p>Insights from industry leaders on trends and innovations in IC design.</p>
+            </div>
+            <br><br>
+        </div><br><br>
+        
+        <div class="box" id="our-mission">
+            <h2 style="color: white; text-decoration: underline;">Our Mission</h2>
+            <p style="color: white;">The mission of the Integrated Circuit Design Club is to cultivate an environment of experiential learning where members are empowered to acquire and enhance the skills necessary for a successful career in the core Electronics and Communication domain. Through hands-on projects, industry interactions, and collaborative initiatives, the club strives to nurture technical competence and innovation among its members.</p>
+            <br>
+        </div>
+        <br>
+        
+        <div class="box" id="our-vision">
+            <h2 style="color: white; text-decoration: underline;">Our Vision</h2>
+            <p style="color: white;">The Integrated Circuit Design Club envisions becoming a vibrant center of excellence in both analog and digital circuit design, providing innovative solutions for various applications. By fostering strong collaboration between industry and academia, the club aims to address the evolving needs of core industries, thereby bridging the gap and promoting technological advancements in the field.</p>
+            <br>
+        </div>
+        <br>
+        
+        <!-- Gallery Section -->
+        <div class="gallery-container" id="gallery">
+            <h2>Gallery</h2>
+            <div class="slides">
+                <div class="slide">
+                    <img src="image1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="slide">
+                    <img src="image2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="slide">
+                    <img src="image3.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="slide">
+                    <img src="image4.jpg" alt="Gallery Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slidesContainer = document.querySelector('.slides');
+
+        function showSlide(index) {
+            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
